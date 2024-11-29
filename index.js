@@ -1,4 +1,3 @@
-const { request } = require('express');
 const express = require('express');
 const categories = require('./routes/categories');
 const sale = require('./routes/sale');
@@ -24,9 +23,6 @@ app.use('/products', products);
 app.use('/sale', sale);
 app.use('/order', order);
 
-
-
-
 app.use(express.json());
 
 const start = async () =>{
@@ -44,5 +40,3 @@ const start = async () =>{
     }
 }
 start();
-
-// app.listen('3333');

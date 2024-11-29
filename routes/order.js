@@ -1,17 +1,15 @@
-const { request } = require('express');
 const express = require('express');
 
 const router = express.Router();
 
-
 router.get('/send', (req, res) =>{
-    res.json({});
-
+    return res.json({
+        message: 'Method not allowed',
+    }, {status: 405});
 })
 
 router.post('/send', (req, res) => {
-    
-    res.json({status: 'OK', message: 'request processed'})
+    return res.json({status: 'OK', message: 'request processed', req: req.json()})
 })
 
 

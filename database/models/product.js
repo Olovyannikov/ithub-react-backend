@@ -1,10 +1,9 @@
 const sequelize = require('../database');
-const { DataTypes } = require("sequelize");
-const { Sequelize } = require('sequelize');
-const Category = require('./category');
+const {DataTypes} = require("sequelize");
+const {Sequelize} = require('sequelize');
 
 const Product = sequelize.define("product", {
-    id : {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
@@ -15,7 +14,6 @@ const Product = sequelize.define("product", {
     description: DataTypes.TEXT,
     image: DataTypes.TEXT,
 });
-
 
 
 module.exports = Product;
